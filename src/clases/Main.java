@@ -80,6 +80,12 @@ public class Main {
                 }
 
             }
+            
+            pw.printf("*****************************************************************************\n");
+            pw.printf("El programa a concluido. Se produjeron %d paquetes incluidos los perdidos.\n", almacen.getContador_total());
+            pw.printf("Se perdieron %d paquetes porque el buffer estaba lleno.\n", almacen.getPer_lleno());
+            pw.printf("Se intentaron retirar %d paquetes del buffer vacio.\n", almacen.getPer_vacio());
+            pw.printf("*****************************************************************************\n");
             pw.println("FIN");
 
         } catch (IOException e) {
@@ -93,6 +99,7 @@ public class Main {
         System.out.printf("Se intentaron retirar %d paquetes del buffer vacio.\n", almacen.getPer_vacio());
         System.out.printf("*****************************************************************************\n");
 
+       
 
 
     }

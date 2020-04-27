@@ -1,0 +1,96 @@
+ --Informacion previa [Mon Apr 27 05:14:27 ART 2020]--
+Estado de consumidor: 1 : NEW
+Estado de consumidor: 2 : NEW
+Estado de consumidor: 3 : NEW
+Elementos en el buffer: 0
+**--0--**
+Mon Apr 27 05:14:29 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--1--**
+Mon Apr 27 05:14:31 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--2--**
+Mon Apr 27 05:14:33 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--3--**
+Mon Apr 27 05:14:35 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--4--**
+Mon Apr 27 05:14:37 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--5--**
+Mon Apr 27 05:14:39 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 19
+**--6--**
+Mon Apr 27 05:14:41 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--7--**
+Mon Apr 27 05:14:43 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--8--**
+Mon Apr 27 05:14:45 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--9--**
+Mon Apr 27 05:14:47 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--10--**
+Mon Apr 27 05:14:49 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--11--**
+Mon Apr 27 05:14:51 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--12--**
+Mon Apr 27 05:14:53 ART 2020
+Estado consumidor: 1: BLOCKED
+Estado consumidor: 2: BLOCKED
+Estado consumidor: 3: BLOCKED
+E en buffer: 25
+**--13--**
+Mon Apr 27 05:14:55 ART 2020
+Estado consumidor: 1: TERMINATED
+Estado consumidor: 2: TERMINATED
+Estado consumidor: 3: TERMINATED
+E en buffer: 0
+**--14--**
+*****************************************************************************
+El programa a concluido. Se produjeron 1000 paquetes incluidos los perdidos.
+Se perdieron 931 paquetes porque el buffer estaba lleno.
+Se intentaron retirar 52 paquetes del buffer vacio.
+*****************************************************************************
+FIN

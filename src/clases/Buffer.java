@@ -1,6 +1,7 @@
 package clases;
  
 import java.util.Random;
+import java.util.concurrent.Semaphore;
 
 /**
  * Un buffer pura perdida, que lleva cuenta de paquetes perdidos e 
@@ -14,7 +15,8 @@ public class Buffer {
     int per_lleno;
     int per_vacio;
     Random random;
-
+    Semaphore semaphore;
+    
     public Buffer(){
         limite_elementos = 25;
         numero_elementos = 0;
@@ -22,6 +24,7 @@ public class Buffer {
         per_lleno = 0;
         per_vacio = 0;
         random = new Random();
+        semaphore =new Semaphore(1);
     }
 
     public Buffer(int limite, int inicial){
@@ -31,6 +34,7 @@ public class Buffer {
         per_lleno = 0;
         per_vacio = 0;
         random = new Random();
+        semaphore =new Semaphore(1);
     }
 
     /**
@@ -58,6 +62,30 @@ public class Buffer {
        System.out.printf("Produccion: %d\n", contador_total);
     }
 
+    /*
+    public void agregar(){
+    	//we check if contador_total is 1000 o more 
+        if(contador_total>=1000){
+        	return;
+        }
+        try {
+        	semaphore.aqcuire();
+            Thread.sleep(random.nextInt(50));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+       // we check if there is space for an element in the buffer  
+       if(numero_elementos < limite_elementos){
+           numero_elementos++;
+       } else{
+           per_lleno++;
+       }
+       
+       contador_total++;
+       System.out.printf("Produccion: %d\n", contador_total);
+       semaphore.release();
+    }
+ */   
     /**
      * Luego de verificar que no este vacio, se saca un elemento del buffer. De no haber ninguno,
      *  se incrementa el contador de intentos fallados.
@@ -74,7 +102,22 @@ public class Buffer {
             per_vacio++;
         }
     }
-
+/*
+    public void sacar(){
+        try {
+        	semaphore.aqcuire();
+            Thread.sleep(random.nextInt(50));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if(numero_elementos >0){
+            numero_elementos--;
+        } else{
+            per_vacio++;
+        }
+        semaphore.release();
+    }
+ */   
     public synchronized int getContador_total(){
         return contador_total;
     }
