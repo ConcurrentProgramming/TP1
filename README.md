@@ -1,2 +1,2 @@
 # TP1
-Modeling a consumer and producer to they can have accessing a market 
+Modeling a consumer-producer to they can have accessing a market 
