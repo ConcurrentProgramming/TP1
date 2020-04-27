@@ -96,6 +96,7 @@ public class Buffer {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        /* we check if it's possible to get an element */
         if(numero_elementos >0){
             numero_elementos--;
         } else{

@@ -34,7 +34,7 @@ public class Main {
 
         try {
         	/* creating the file*/
-            FileOutputStream file = new FileOutputStream("log.txt");
+            FileOutputStream file = new FileOutputStream("Estadisticas.txt");
             PrintStream pw = new PrintStream(file);
             
             /* Print previous information */

@@ -23,7 +23,8 @@ public class Productor extends Thread{
                 condicion = false;
             }
         }
-        System.out.printf(getName() + " ha finalizado. Se llevaron a cabo %d operaciones\n", cuenta);
+        System.out.printf(getName() + " ha finalizado. "
+        		+ "Se llevaron a cabo %d operaciones\n", cuenta);
     }
 
     public int getCuenta(){
