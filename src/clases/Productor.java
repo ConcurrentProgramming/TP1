@@ -3,33 +3,37 @@ package clases;
 
 public class Productor extends Thread{
 
-    Buffer almacen;
+    private Buffer almacen;
+    private ArrayList<Producto> lista_producto;
     int cuenta;
 
     public Productor(Buffer almacen){
         this.almacen = almacen;
         cuenta = 0;
+        lista_producto = new ArrayList<Producto>();
     }
 
     @Override
     public void run(){
-        boolean condicion = true;
-        while(condicion){
-        	/*add product*/
-            almacen.agregar();
-            cuenta++;
-            /* check to the end program*/
-            if(almacen.terminarProductores()){
-                condicion = false;
-            }
+        while(terminar()){
+        	/*create product*/
+        	Producto producto;
+        	producto = Producto.crearProducto(Thread.currentThread().getName());
+            almacen.agregar(producto);
         }
-        System.out.printf(getName() + " ha finalizado. "
-        		+ "Se llevaron a cabo %d operaciones\n", cuenta);
     }
 
     public int getCuenta(){
         return cuenta;
     }
-
+    
+    public Producto getProductoProducido(int ir) {
+    	if(ir <= lista_producto.size()) {
+    	}
+    }
+    
+    private void terminar() {
+    	return almacen.terminarProductores();	
+    }
 
 }

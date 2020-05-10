@@ -19,7 +19,9 @@ public class Main {
         Buffer almacen = new Buffer();
         Thread[] hilo_p = new Thread[cantidad_productores];
         Thread[] hilo_c = new Thread[cantidad_consumidores];
-
+        
+        Logger log = new Logger("Estadisticas");
+        
         /* creating the producer*/
         for(int i=0; i<cantidad_productores; i++){
             hilo_p[i] = new Productor(almacen);
@@ -32,29 +34,7 @@ public class Main {
             hilo_c[i].setName("consumidor: " + (i+1));
         }
 
-        try {
-        	/* creating the file*/
-            FileOutputStream file = new FileOutputStream("Estadisticas.txt");
-            PrintStream pw = new PrintStream(file);
-            
-            /* Print previous information */
-            pw.println(" --Informacion previa [" + new Date() + "]--");
-            
-            for(int i=0; i<cantidad_consumidores; i++){
-                pw.println("Estado de " + hilo_c[i].getName() + " : " + hilo_c[i].getState());
-            }
-            
-            pw.println("Elementos en el buffer: " + almacen.getNumero_elementos());
-            pw.println("**--0--**");
-
-            /* run thread */
-            for(int i=0; i<cantidad_productores; i++){
-                hilo_p[i].start();
-            }
-            
-            for(int i=0; i<cantidad_consumidores; i++){
-                hilo_c[i].start();
-            }
+      
 
             boolean condicion = true;
             int impresiones = 1;
